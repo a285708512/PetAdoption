@@ -11,7 +11,7 @@ import UIKit
 import SDWebImage
 class PetTableViewController: UIViewController {
 
-    @IBOutlet weak private var mTableView: UITableView!
+    @IBOutlet weak  var mTableView: UITableView!
     
     var petList = [PetModel]()
     
@@ -35,9 +35,22 @@ class PetTableViewController: UIViewController {
             }
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PetViewController{
+            destination.pet = petList[mTableView.indexPathForSelectedRow!.row]
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    
 }
 
+    
 extension PetTableViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,4 +76,6 @@ extension PetTableViewController: UITableViewDelegate, UITableViewDataSource {
 func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
 }
+
+
 

@@ -13,6 +13,7 @@
 		2AA26EEB287B86DB003C5045 /* PetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EEA287B86DB003C5045 /* PetModel.swift */; };
 		2AA26EEE287B879D003C5045 /* PetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EED287B879D003C5045 /* PetTableViewController.swift */; };
 		2AA26EF1287B87E1003C5045 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2AA26EF0287B87E1003C5045 /* SDWebImage */; };
+		2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EF2287B8BFE003C5045 /* PetViewController.swift */; };
 		2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E2287B0E2300580F5D /* AppDelegate.swift */; };
 		2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E4287B0E2300580F5D /* SceneDelegate.swift */; };
 		2ABB11E7287B0E2300580F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E6287B0E2300580F5D /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		2AA26EE7287B8694003C5045 /* NetworkSerview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSerview.swift; sourceTree = "<group>"; };
 		2AA26EEA287B86DB003C5045 /* PetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetModel.swift; sourceTree = "<group>"; };
 		2AA26EED287B879D003C5045 /* PetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewController.swift; sourceTree = "<group>"; };
+		2AA26EF2287B8BFE003C5045 /* PetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
 		2ABB11DF287B0E2300580F5D /* Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABB11E2287B0E2300580F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ABB11E4287B0E2300580F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				2ABB11E6287B0E2300580F5D /* ViewController.swift */,
 				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
+				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				2ABB11E7287B0E2300580F5D /* ViewController.swift in Sources */,
 				2AA26EE4287B8660003C5045 /* PetTableViewCell.swift in Sources */,
+				2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */,
 				2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */,
 				2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */,
 				2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */,
