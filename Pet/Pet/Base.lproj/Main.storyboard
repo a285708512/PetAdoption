@@ -30,16 +30,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="IKx-68-gfY" kind="show" id="kwy-hF-K08"/>
+                                    <segue destination="IKx-68-gfY" kind="show" identifier="dogcell" id="kwy-hF-K08"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcL-Uu-2JT" userLabel="catButton">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcL-Uu-2JT" userLabel="catButton">
                                 <rect key="frame" x="234" y="384" width="145" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <segue destination="IKx-68-gfY" kind="show" id="no9-7k-DwT"/>
+                                    <segue destination="IKx-68-gfY" kind="show" identifier="catCell" id="no9-7k-DwT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="50.892857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Pet Table View Controller-->
         <scene sceneID="HGi-e9-Vyh">
             <objects>
-                <viewController id="IKx-68-gfY" sceneMemberID="viewController">
+                <viewController id="IKx-68-gfY" customClass="PetTableViewController" customModule="Pet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8am-xn-uGZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EnQ-qg-EL1"/>
+                    <connections>
+                        <outlet property="mTableView" destination="hvF-k3-IXO" id="lXi-dy-f0e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTy-yp-n0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
