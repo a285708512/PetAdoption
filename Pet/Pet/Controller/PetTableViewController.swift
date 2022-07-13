@@ -9,6 +9,7 @@ import UIKit
 
 import UIKit
 import SDWebImage
+
 class PetTableViewController: UIViewController {
 
     @IBOutlet weak  var mTableView: UITableView!
@@ -16,66 +17,55 @@ class PetTableViewController: UIViewController {
     var petList = [PetModel]()
     
     var petType: PetType = .dog
+    
+    var adapter: TableViewAdapter?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mTableView.delegate = self
-        mTableView.dataSource = self
+        self.adapter = .init(mTableView)
+        
         let nib = UINib(nibName: "PetTableViewCell", bundle: nil)
-        mTableView.register(nib, forCellReuseIdentifier: "dogCell")
+        mTableView.register(nib, forCellReuseIdentifier: "PetTableViewCell")
         
         NetworkService.downloadJson(type: petType) { result in
             switch result {
             case .success(let data):
                 self.petList = data
-                self.mTableView.reloadData()
+                self.setupRow()
             case .failure(let error):
                 print(error)
             }
         }
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PetViewController{
-            destination.pet = petList[mTableView.indexPathForSelectedRow!.row]
+    func setupRow() {
+        var rowModels: [CellRowModel] = []
+        for pet in self.petList {
+            rowModels.append(PetTableViewCellRowModel(title: pet.animalVariety,
+                                                      petModel: pet,
+                                                      imageURLStr: pet.albumFile,
+                                                      cellAction: { rowModel in
+                guard let rowModel = rowModel as? PetTableViewCellRowModel else { return }
+                if let petModel = rowModel.petModel {
+                    self.gotoNextVC(pet: petModel)
+                }
+                
+            }
+                                                     ))
+        }
+        self.adapter?.updateData(rowModels: rowModels)
+    }
+    
+    func gotoNextVC(pet: PetModel) {
+        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "PetViewController") as? PetViewController {
+            vc.pet = pet
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetails", sender: self)
-    }
-    
-    
 }
-
-    
-extension PetTableViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return petList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dogCell", for: indexPath)
-        as! PetTableViewCell
-        
-        let pet = petList[indexPath.row]
-        cell.myLabel.text = pet.animalKind
-        cell.myImageView.sd_setImage(with: URL(string: pet.albumFile),
-        placeholderImage:UIImage(named:"LoadingImage"), options:[], completed: nil)
-
-        
-        return cell
-    }
-    
-    
-}
-
-func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 100
-}
-
 
 

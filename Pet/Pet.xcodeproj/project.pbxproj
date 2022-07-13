@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8F976F287EE03A00F057F8 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F976E287EE03A00F057F8 /* TableViewAdapter.swift */; };
 		2AA26EE4287B8660003C5045 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EE2287B8660003C5045 /* PetTableViewCell.swift */; };
 		2AA26EE5287B8660003C5045 /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AA26EE3287B8660003C5045 /* PetTableViewCell.xib */; };
 		2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EE7287B8694003C5045 /* NetworkSerview.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A8F976E287EE03A00F057F8 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		2AA26EE2287B8660003C5045 /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
 		2AA26EE3287B8660003C5045 /* PetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
 		2AA26EE7287B8694003C5045 /* NetworkSerview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSerview.swift; sourceTree = "<group>"; };
@@ -51,12 +53,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A8F9770287EE03D00F057F8 /* Adaptor */ = {
+			isa = PBXGroup;
+			children = (
+				2A8F976E287EE03A00F057F8 /* TableViewAdapter.swift */,
+			);
+			path = Adaptor;
+			sourceTree = "<group>";
+		};
 		2AA26EE1287B8630003C5045 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				2ABB11E6287B0E2300580F5D /* ViewController.swift */,
 				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
 				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,
+				2A8F9770287EE03D00F057F8 /* Adaptor */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 				2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */,
 				2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */,
 				2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */,
+				2A8F976F287EE03A00F057F8 /* TableViewAdapter.swift in Sources */,
 				2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */,
 				2AA26EEB287B86DB003C5045 /* PetModel.swift in Sources */,
 				2AA26EEE287B879D003C5045 /* PetTableViewController.swift in Sources */,
