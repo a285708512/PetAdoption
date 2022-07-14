@@ -38,6 +38,13 @@ class PetTableViewController: UIViewController {
         
     }
     
+    func showShareVC(petVariety: String = "",petImage: UIImage = UIImage()) {
+        let activityVC = UIActivityViewController(activityItems: [petVariety,petImage],
+                                                  applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    
     func setupRow() {
         var rowModels: [CellRowModel] = []
         for pet in self.petList {
@@ -45,6 +52,10 @@ class PetTableViewController: UIViewController {
                                                       petModel: pet,
                                                       imageURLStr: pet.albumFile,
                                                       sex:pet.animalSex,
+                                                      shareButtonAtion: { image in
+                
+                self.showShareVC(petVariety: pet.animalVariety ?? "", petImage: image )
+            },
                                                       cellAction: { rowModel in
                 guard let rowModel = rowModel as? PetTableViewCellRowModel else { return }
                 if let petModel = rowModel.petModel {
