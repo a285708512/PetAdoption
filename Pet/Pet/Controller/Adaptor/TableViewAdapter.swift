@@ -10,15 +10,20 @@ import UIKit
 
 protocol CellViewBase {
     func setupCellView(rowModel: CellRowModel)
+    //丟進去一個參數叫做CellRowModel的東西，然後叫做rowModel
+    //會跑到PetViewController
 }
 
+
 protocol CellRowModelBase {
+    //CellModelBase
     func cellID() -> String
 }
 
 class CellRowModel: CellRowModelBase {
     
     func cellID() -> String {
+        //cellID只是隨便寫
         return "cellID"
     }
     

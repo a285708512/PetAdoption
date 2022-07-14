@@ -17,17 +17,21 @@ class PetTableViewCellRowModel: CellRowModel {
     
     var imageURLStr: String? = ""
     
+    var sex:String? = ""
+    
     var petModel: PetModel?
     
     init(
         title: String? = "",
         petModel: PetModel?,
         imageURLStr: String? = "",
+        sex:String? = "",
         cellAction: ((CellRowModel)->())? = nil
     ){
         super.init()
         self.title = title
         self.petModel = petModel
+        self.sex = sex
         self.imageURLStr = imageURLStr
         self.cellAction = cellAction
     }
@@ -37,6 +41,7 @@ class PetTableViewCellRowModel: CellRowModel {
 class PetTableViewCell: UITableViewCell {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var sexLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -57,6 +62,8 @@ extension PetTableViewCell: CellViewBase{
         guard let rowModel = rowModel as? PetTableViewCellRowModel else { return }
         
         self.myLabel.text = rowModel.title
+        
+        self.sexLabel.text = rowModel.sex
         
         self.myImageView.sd_setImage(with: URL(string: rowModel.imageURLStr ?? ""),
                                      placeholderImage:UIImage(named:"LoadingImage"),

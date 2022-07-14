@@ -6,15 +6,13 @@
 //
 
 import UIKit
-
-import UIKit
 import SDWebImage
 
 class PetTableViewController: UIViewController {
 
     @IBOutlet weak  var mTableView: UITableView!
     
-    var petList = [PetModel]()
+    var petList:[PetModel] = []
     
     var petType: PetType = .dog
     
@@ -46,6 +44,7 @@ class PetTableViewController: UIViewController {
             rowModels.append(PetTableViewCellRowModel(title: pet.animalVariety,
                                                       petModel: pet,
                                                       imageURLStr: pet.albumFile,
+                                                      sex:pet.animalSex,
                                                       cellAction: { rowModel in
                 guard let rowModel = rowModel as? PetTableViewCellRowModel else { return }
                 if let petModel = rowModel.petModel {
@@ -53,7 +52,7 @@ class PetTableViewController: UIViewController {
                 }
                 
             }
-                                                     ))
+          ))
         }
         self.adapter?.updateData(rowModels: rowModels)
     }
