@@ -61,6 +61,8 @@ class PetTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     @objc func shareButtonAction() {
         if let shareAction = shareAtion {
             shareAction(self.myImageView.image ?? UIImage())

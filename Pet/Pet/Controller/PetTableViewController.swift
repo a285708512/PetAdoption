@@ -38,12 +38,16 @@ class PetTableViewController: UIViewController {
         
     }
     
+    //MARK: - 分享的按鈕寫法
+    
     func showShareVC(petVariety: String = "",petImage: UIImage = UIImage()) {
         let activityVC = UIActivityViewController(activityItems: [petVariety,petImage],
                                                   applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
     }
     
+    
+    //MARK: -
     
     func setupRow() {
         var rowModels: [CellRowModel] = []
@@ -67,6 +71,9 @@ class PetTableViewController: UIViewController {
         }
         self.adapter?.updateData(rowModels: rowModels)
     }
+    
+    
+    //MARK: - 當user點選特定cell會進到下一個PetViewController
     
     func gotoNextVC(pet: PetModel) {
         
