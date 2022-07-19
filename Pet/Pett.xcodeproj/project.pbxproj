@@ -77,9 +77,9 @@
 		2AA26EE1287B8630003C5045 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2A9DC2932886402400CECEEF /* WelcomeViewController.swift */,
 				2A9DC2912886402300CECEEF /* LoginViewController.swift */,
 				2A9DC2922886402400CECEEF /* RegisterViewController.swift */,
-				2A9DC2932886402400CECEEF /* WelcomeViewController.swift */,
 				2ABB11E6287B0E2300580F5D /* ViewController.swift */,
 				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
 				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,

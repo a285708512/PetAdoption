@@ -52,6 +52,9 @@ class TableViewAdapter: NSObject {
     }
     
 }
+
+//MARK: - 是使cell顯示有幾個cell & 會跳到PetTableViewCell執行將會顯示什麼樣名稱的cell(種類&地點之類的)
+
 extension TableViewAdapter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,6 +76,9 @@ extension TableViewAdapter: UITableViewDataSource {
         return cell
     }
 }
+
+//MARK: - 當user點選某一個cell會執行的程式碼
+
 extension TableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let action = rowModels[indexPath.row].cellAction {

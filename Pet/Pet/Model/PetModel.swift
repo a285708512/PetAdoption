@@ -6,8 +6,39 @@
 //
 
 import Foundation
-struct PetModel: Decodable {
+struct PetModel: Codable,Equatable {
 
+    static func == (lhs: PetModel, rhs: PetModel) -> Bool {
+        return lhs.albumFile == rhs.albumFile &&
+        lhs.albumUpdate == rhs.albumUpdate &&
+        lhs.animalVariety == rhs.animalVariety &&
+        lhs.animalAge == rhs.animalAge &&
+        lhs.animalAreaPkid == rhs.animalAreaPkid &&
+        lhs.animalBacterin == rhs.animalBacterin &&
+        lhs.animalBodytype == rhs.animalBodytype &&
+        lhs.animalCaption == rhs.animalCaption &&
+        lhs.animalCloseddate == rhs.animalCloseddate &&
+        lhs.animalColour == rhs.animalColour &&
+        lhs.animalCreatetime == rhs.animalCreatetime &&
+        lhs.animalFoundplace == rhs.animalFoundplace &&
+        lhs.animalId == rhs.animalId &&
+        lhs.animalKind == rhs.animalKind &&
+        lhs.animalOpendate == rhs.animalOpendate &&
+        lhs.animalPlace == rhs.animalPlace &&
+        lhs.animalRemark == rhs.animalRemark &&
+        lhs.animalSex == rhs.animalSex &&
+        lhs.animalShelterPkid == rhs.animalShelterPkid &&
+        lhs.animalStatus == rhs.animalStatus &&
+        lhs.animalSterilization == rhs.animalSterilization &&
+        lhs.animalSubid == rhs.animalSubid &&
+        lhs.animalTitle == rhs.animalTitle &&
+        lhs.animalUpdate == rhs.animalUpdate &&
+        lhs.cDate == rhs.cDate &&
+        lhs.shelterAddress == rhs.shelterAddress &&
+        lhs.shelterName == rhs.shelterName &&
+        lhs.shelterTel == rhs.shelterTel
+        //lhr左邊的東西 rhs右邊的東西
+    }
     
     let albumFile : String
     let albumUpdate : String?
