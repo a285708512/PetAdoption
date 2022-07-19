@@ -1,0 +1,12 @@
+
+platform :ios, '13.0'
+
+target 'Pet' do
+  
+  use_frameworks!
+
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  # Pods for Pet
+
+end
