@@ -12,7 +12,7 @@ import UIKit
 class SelectConditionsCellRowModel: CellRowModel {
     
     override func cellID() -> String {
-        return "Pet.SelectConditionsCell"
+        return "SelectConditionsCell"
     }
     
     var text: String = ""

@@ -39,7 +39,7 @@ class DefaultTableViewController: UIViewController {
         
         if let cellIDs = cellIDs as? [UITableViewCell.Type] {
             for cellID in cellIDs {
-                self.defaultTableView.register(cellID, forCellReuseIdentifier: cellID.description())
+                self.defaultTableView.register(cellID, forCellReuseIdentifier: "\(cellID)")
             }
         }
         
