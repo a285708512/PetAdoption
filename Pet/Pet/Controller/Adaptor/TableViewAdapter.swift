@@ -68,7 +68,6 @@ extension TableViewAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: rowModels[indexPath.row].cellID(), for: indexPath)
-        
         if let cell = cell as? CellViewBase {
             cell.setupCellView(rowModel: rowModels[indexPath.row])
         }

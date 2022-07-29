@@ -21,11 +21,16 @@
 		2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA26EF2287B8BFE003C5045 /* PetViewController.swift */; };
 		2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E2287B0E2300580F5D /* AppDelegate.swift */; };
 		2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E4287B0E2300580F5D /* SceneDelegate.swift */; };
-		2ABB11E7287B0E2300580F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABB11E6287B0E2300580F5D /* ViewController.swift */; };
 		2ABB11EA287B0E2300580F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB11E8287B0E2300580F5D /* Main.storyboard */; };
 		2ABB11EC287B0E2300580F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB11EB287B0E2300580F5D /* Assets.xcassets */; };
 		2ABB11EF287B0E2300580F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB11ED287B0E2300580F5D /* LaunchScreen.storyboard */; };
 		8543002835A5887E48F74AFB /* Pods_Pet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463526D40C350F983514D366 /* Pods_Pet.framework */; };
+		94762E802893EEB5007195B6 /* DefaultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E7F2893EEB5007195B6 /* DefaultTableViewController.swift */; };
+		94762E822893F039007195B6 /* SearchConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E812893F039007195B6 /* SearchConditionsViewController.swift */; };
+		94762E852893F2E7007195B6 /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E842893F2E7007195B6 /* TitleDetailCell.swift */; };
+		94762E872893F32F007195B6 /* TitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94762E862893F32F007195B6 /* TitleDetailCell.xib */; };
+		94762E892893F727007195B6 /* SelectCondionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E882893F727007195B6 /* SelectCondionsViewController.swift */; };
+		94762E8E2893FF41007195B6 /* SelectConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E8A2893F777007195B6 /* SelectConditionsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,13 +49,18 @@
 		2ABB11DF287B0E2300580F5D /* Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ABB11E2287B0E2300580F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ABB11E4287B0E2300580F5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2ABB11E6287B0E2300580F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2ABB11E9287B0E2300580F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ABB11EB287B0E2300580F5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ABB11EE287B0E2300580F5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ABB11F0287B0E2300580F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463526D40C350F983514D366 /* Pods_Pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7645D143B9E5E68AD063F230 /* Pods-Pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.debug.xcconfig"; path = "Target Support Files/Pods-Pet/Pods-Pet.debug.xcconfig"; sourceTree = "<group>"; };
+		94762E7F2893EEB5007195B6 /* DefaultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewController.swift; sourceTree = "<group>"; };
+		94762E812893F039007195B6 /* SearchConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConditionsViewController.swift; sourceTree = "<group>"; };
+		94762E842893F2E7007195B6 /* TitleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
+		94762E862893F32F007195B6 /* TitleDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleDetailCell.xib; sourceTree = "<group>"; };
+		94762E882893F727007195B6 /* SelectCondionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCondionsViewController.swift; sourceTree = "<group>"; };
+		94762E8A2893F777007195B6 /* SelectConditionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectConditionsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +88,11 @@
 			isa = PBXGroup;
 			children = (
 				2A9DC2932886402400CECEEF /* WelcomeViewController.swift */,
+				94762E7E2893EE9D007195B6 /* TableViewBase */,
 				2A9DC2912886402300CECEEF /* LoginViewController.swift */,
+				94762E812893F039007195B6 /* SearchConditionsViewController.swift */,
+				94762E882893F727007195B6 /* SelectCondionsViewController.swift */,
 				2A9DC2922886402400CECEEF /* RegisterViewController.swift */,
-				2ABB11E6287B0E2300580F5D /* ViewController.swift */,
 				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
 				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,
 				2A8F9770287EE03D00F057F8 /* Adaptor */,
@@ -93,6 +105,7 @@
 			children = (
 				2AA26EE2287B8660003C5045 /* PetTableViewCell.swift */,
 				2AA26EE3287B8660003C5045 /* PetTableViewCell.xib */,
+				94762E832893F2D5007195B6 /* SearchCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +168,24 @@
 				463526D40C350F983514D366 /* Pods_Pet.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94762E7E2893EE9D007195B6 /* TableViewBase */ = {
+			isa = PBXGroup;
+			children = (
+				94762E7F2893EEB5007195B6 /* DefaultTableViewController.swift */,
+			);
+			path = TableViewBase;
+			sourceTree = "<group>";
+		};
+		94762E832893F2D5007195B6 /* SearchCells */ = {
+			isa = PBXGroup;
+			children = (
+				94762E842893F2E7007195B6 /* TitleDetailCell.swift */,
+				94762E862893F32F007195B6 /* TitleDetailCell.xib */,
+				94762E8A2893F777007195B6 /* SelectConditionsCell.swift */,
+			);
+			path = SearchCells;
 			sourceTree = "<group>";
 		};
 		DBAE37D0F014C09C91D8042B /* Pods */ = {
@@ -235,6 +266,7 @@
 				2ABB11EF287B0E2300580F5D /* LaunchScreen.storyboard in Resources */,
 				2AA26EE5287B8660003C5045 /* PetTableViewCell.xib in Resources */,
 				2A9DC29028863A9E00CECEEF /* GoogleService-Info.plist in Resources */,
+				94762E872893F32F007195B6 /* TitleDetailCell.xib in Resources */,
 				2ABB11EC287B0E2300580F5D /* Assets.xcassets in Resources */,
 				2ABB11EA287B0E2300580F5D /* Main.storyboard in Resources */,
 			);
@@ -289,18 +321,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ABB11E7287B0E2300580F5D /* ViewController.swift in Sources */,
 				2A9DC2952886402400CECEEF /* RegisterViewController.swift in Sources */,
 				2AA26EE4287B8660003C5045 /* PetTableViewCell.swift in Sources */,
 				2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */,
 				2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */,
 				2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */,
+				94762E852893F2E7007195B6 /* TitleDetailCell.swift in Sources */,
 				2A8F976F287EE03A00F057F8 /* TableViewAdapter.swift in Sources */,
 				2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */,
 				2AA26EEB287B86DB003C5045 /* PetModel.swift in Sources */,
 				2A9DC2962886402400CECEEF /* WelcomeViewController.swift in Sources */,
+				94762E822893F039007195B6 /* SearchConditionsViewController.swift in Sources */,
+				94762E802893EEB5007195B6 /* DefaultTableViewController.swift in Sources */,
 				2A9DC2942886402400CECEEF /* LoginViewController.swift in Sources */,
 				2AA26EEE287B879D003C5045 /* PetTableViewController.swift in Sources */,
+				94762E892893F727007195B6 /* SelectCondionsViewController.swift in Sources */,
+				94762E8E2893FF41007195B6 /* SelectConditionsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
