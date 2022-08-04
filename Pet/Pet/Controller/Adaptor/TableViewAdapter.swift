@@ -23,7 +23,7 @@ protocol CellRowModelBase {
 class CellRowModel: CellRowModelBase {
     
     func cellID() -> String {
-        //cellID只是隨便寫
+        //cellID只是一個檔名
         return "cellID"
     }
     

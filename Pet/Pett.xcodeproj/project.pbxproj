@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8547A4289BF61B004FFCA0 /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8547A3289BF61B004FFCA0 /* TitleDetailCell.swift */; };
+		2A8547A6289BF6F1004FFCA0 /* TitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A8547A5289BF6F1004FFCA0 /* TitleDetailCell.xib */; };
+		2A8547A8289BF798004FFCA0 /* SelectConditionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8547A7289BF798004FFCA0 /* SelectConditionsCell.swift */; };
+		2A8547AC289BFEFA004FFCA0 /* SearchConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8547AB289BFEFA004FFCA0 /* SearchConditionsViewController.swift */; };
+		2A8547AE289BFEFD004FFCA0 /* SelectCondionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8547AD289BFEFD004FFCA0 /* SelectCondionsViewController.swift */; };
+		2A8547B1289BFFFE004FFCA0 /* DefaultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8547B0289BFFFE004FFCA0 /* DefaultTableViewController.swift */; };
 		2A8F976F287EE03A00F057F8 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8F976E287EE03A00F057F8 /* TableViewAdapter.swift */; };
 		2A9DC29028863A9E00CECEEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9DC28F28863A9E00CECEEF /* GoogleService-Info.plist */; };
 		2A9DC2942886402400CECEEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9DC2912886402300CECEEF /* LoginViewController.swift */; };
@@ -30,6 +36,12 @@
 
 /* Begin PBXFileReference section */
 		10F40F75C7DA3AAE66B6732E /* Pods-Pet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.release.xcconfig"; path = "Target Support Files/Pods-Pet/Pods-Pet.release.xcconfig"; sourceTree = "<group>"; };
+		2A8547A3289BF61B004FFCA0 /* TitleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
+		2A8547A5289BF6F1004FFCA0 /* TitleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleDetailCell.xib; sourceTree = "<group>"; };
+		2A8547A7289BF798004FFCA0 /* SelectConditionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectConditionsCell.swift; sourceTree = "<group>"; };
+		2A8547AB289BFEFA004FFCA0 /* SearchConditionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchConditionsViewController.swift; sourceTree = "<group>"; };
+		2A8547AD289BFEFD004FFCA0 /* SelectCondionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCondionsViewController.swift; sourceTree = "<group>"; };
+		2A8547B0289BFFFE004FFCA0 /* DefaultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewController.swift; sourceTree = "<group>"; };
 		2A8F976E287EE03A00F057F8 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		2A9DC28F28863A9E00CECEEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A9DC2912886402300CECEEF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +78,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A8547A2289BF4FD004FFCA0 /* SearchCells */ = {
+			isa = PBXGroup;
+			children = (
+				2A8547A7289BF798004FFCA0 /* SelectConditionsCell.swift */,
+				2A8547A3289BF61B004FFCA0 /* TitleDetailCell.swift */,
+				2A8547A5289BF6F1004FFCA0 /* TitleDetailCell.xib */,
+			);
+			path = SearchCells;
+			sourceTree = "<group>";
+		};
+		2A8547A9289BFE75004FFCA0 /* Controller-註冊 */ = {
+			isa = PBXGroup;
+			children = (
+				2A9DC2932886402400CECEEF /* WelcomeViewController.swift */,
+				2A9DC2912886402300CECEEF /* LoginViewController.swift */,
+				2A9DC2922886402400CECEEF /* RegisterViewController.swift */,
+			);
+			path = "Controller-註冊";
+			sourceTree = "<group>";
+		};
+		2A8547AA289BFEDD004FFCA0 /* Controller - Search & Select */ = {
+			isa = PBXGroup;
+			children = (
+				2A8547AB289BFEFA004FFCA0 /* SearchConditionsViewController.swift */,
+				2A8547AD289BFEFD004FFCA0 /* SelectCondionsViewController.swift */,
+			);
+			path = "Controller - Search & Select";
+			sourceTree = "<group>";
+		};
+		2A8547AF289BFFF6004FFCA0 /* TableViewBase */ = {
+			isa = PBXGroup;
+			children = (
+				2A8547B0289BFFFE004FFCA0 /* DefaultTableViewController.swift */,
+			);
+			path = TableViewBase;
+			sourceTree = "<group>";
+		};
+		2A8547B2289C000C004FFCA0 /* PetTable */ = {
+			isa = PBXGroup;
+			children = (
+				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
+				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,
+			);
+			path = PetTable;
+			sourceTree = "<group>";
+		};
 		2A8F9770287EE03D00F057F8 /* Adaptor */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +135,11 @@
 		2AA26EE1287B8630003C5045 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2A9DC2932886402400CECEEF /* WelcomeViewController.swift */,
-				2A9DC2912886402300CECEEF /* LoginViewController.swift */,
-				2A9DC2922886402400CECEEF /* RegisterViewController.swift */,
 				2ABB11E6287B0E2300580F5D /* ViewController.swift */,
-				2AA26EED287B879D003C5045 /* PetTableViewController.swift */,
-				2AA26EF2287B8BFE003C5045 /* PetViewController.swift */,
+				2A8547AF289BFFF6004FFCA0 /* TableViewBase */,
+				2A8547AA289BFEDD004FFCA0 /* Controller - Search & Select */,
+				2A8547B2289C000C004FFCA0 /* PetTable */,
+				2A8547A9289BFE75004FFCA0 /* Controller-註冊 */,
 				2A8F9770287EE03D00F057F8 /* Adaptor */,
 			);
 			path = Controller;
@@ -93,6 +150,7 @@
 			children = (
 				2AA26EE2287B8660003C5045 /* PetTableViewCell.swift */,
 				2AA26EE3287B8660003C5045 /* PetTableViewCell.xib */,
+				2A8547A2289BF4FD004FFCA0 /* SearchCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +293,7 @@
 				2ABB11EF287B0E2300580F5D /* LaunchScreen.storyboard in Resources */,
 				2AA26EE5287B8660003C5045 /* PetTableViewCell.xib in Resources */,
 				2A9DC29028863A9E00CECEEF /* GoogleService-Info.plist in Resources */,
+				2A8547A6289BF6F1004FFCA0 /* TitleDetailCell.xib in Resources */,
 				2ABB11EC287B0E2300580F5D /* Assets.xcassets in Resources */,
 				2ABB11EA287B0E2300580F5D /* Main.storyboard in Resources */,
 			);
@@ -292,13 +351,18 @@
 				2ABB11E7287B0E2300580F5D /* ViewController.swift in Sources */,
 				2A9DC2952886402400CECEEF /* RegisterViewController.swift in Sources */,
 				2AA26EE4287B8660003C5045 /* PetTableViewCell.swift in Sources */,
+				2A8547AC289BFEFA004FFCA0 /* SearchConditionsViewController.swift in Sources */,
+				2A8547A8289BF798004FFCA0 /* SelectConditionsCell.swift in Sources */,
 				2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */,
 				2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */,
 				2ABB11E3287B0E2300580F5D /* AppDelegate.swift in Sources */,
+				2A8547B1289BFFFE004FFCA0 /* DefaultTableViewController.swift in Sources */,
 				2A8F976F287EE03A00F057F8 /* TableViewAdapter.swift in Sources */,
 				2ABB11E5287B0E2300580F5D /* SceneDelegate.swift in Sources */,
+				2A8547A4289BF61B004FFCA0 /* TitleDetailCell.swift in Sources */,
 				2AA26EEB287B86DB003C5045 /* PetModel.swift in Sources */,
 				2A9DC2962886402400CECEEF /* WelcomeViewController.swift in Sources */,
+				2A8547AE289BFEFD004FFCA0 /* SelectCondionsViewController.swift in Sources */,
 				2A9DC2942886402400CECEEF /* LoginViewController.swift in Sources */,
 				2AA26EEE287B879D003C5045 /* PetTableViewController.swift in Sources */,
 			);

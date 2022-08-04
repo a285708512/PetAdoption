@@ -9,6 +9,8 @@ import UIKit
 import SDWebImage
 
 class PetTableViewController: UIViewController {
+    
+    var conditions: SearchConditions?
 
     @IBOutlet weak  var mTableView: UITableView!
     
@@ -28,7 +30,7 @@ class PetTableViewController: UIViewController {
         let nib = UINib(nibName: "PetTableViewCell", bundle: nil)
         mTableView.register(nib, forCellReuseIdentifier: "PetTableViewCell")
         
-        NetworkService.downloadJson(type: petType) { result in
+        NetworkService.downloadJson() { result in
             switch result {
             case .success(let data):
                 self.petList = data
@@ -39,6 +41,29 @@ class PetTableViewController: UIViewController {
         }
         
     }
+    
+    func filterList(list: [ PetModel ] = []) -> [PetModel] {
+        guard let conditions = conditions else {
+            return list
+        }
+
+        var filterList = list.filter { model in
+            let address = model.shelterAddress ?? ""
+            let area = address.prefix(3)
+            return String(area) == conditions.area
+        }
+        
+        filterList = filterList.filter({ model in
+            model.animalSex == conditions.sex
+        })
+        
+        filterList = filterList.filter({ model in
+            model.animalKind == conditions.kind
+        })
+        
+        return filterList
+    }
+    
     //MARK: - 分享的按鈕寫法
 
     func showShareVC(petVariety: String = "",petImage: UIImage = UIImage()) {
@@ -57,7 +82,7 @@ class PetTableViewController: UIViewController {
         self.getLoveList()
         //先把getLoveList初始化
         
-        for pet in self.petList {
+        for pet in self.filterList(list: self.petList) {
             rowModels.append(PetTableViewCellRowModel(title: pet.animalVariety,
                                                       petModel: pet,
                                                       imageURLStr: pet.albumFile,
