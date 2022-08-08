@@ -17,12 +17,11 @@ class SelectCondionsViewController: DefaultTableViewController {
     var confirmAction: (([String])->())?
     
     override func viewDidLoad() {
-        
-        self.setCellIDs(cellIDs: [
+    
+        super.viewDidLoad()
+        self.regisCell(cellIDs: [
             SelectConditionsCell.self
         ])
-        
-        super.viewDidLoad()
         self.setupRow()
     }
     
@@ -68,7 +67,7 @@ class SelectCondionsViewController: DefaultTableViewController {
             button.addTarget(self, action: #selector(bottomButtonAction), for: .touchUpInside)
     }
     
-    //MARK: - 不太懂
+    //MARK: - 
     @objc override func bottomButtonAction() {
         if let confirmAction = self.confirmAction {
             confirmAction(self.selectedArray)

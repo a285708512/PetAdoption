@@ -23,8 +23,8 @@ class SearchConditionsViewController: DefaultTableViewController {
     var areas: [String] = []
     
     override func viewDidLoad() {
-        self.setCellIDs(cellIDs: [
-            "TitleDetailCell"
+        self.regisCell(cellIDs: [
+        "TitleDetailCell"
         ])
         super.viewDidLoad()
         self.buttonAction = {
@@ -66,6 +66,8 @@ class SearchConditionsViewController: DefaultTableViewController {
     func setupRow() {
         var rowModels: [CellRowModel] = []
         
+        //品種的Row
+        
         let petRow = TitleDetailCellRowModel(title: "品種",
                                              detail: self.conditios.kind,
                                              cellAction: {
@@ -81,6 +83,9 @@ class SearchConditionsViewController: DefaultTableViewController {
         })
         rowModels.append(petRow)
         
+        
+        //性別的Row
+        
         let sexRow = TitleDetailCellRowModel(title: "性別",
                                              detail: self.conditios.sex,
                                              cellAction: {
@@ -95,6 +100,8 @@ class SearchConditionsViewController: DefaultTableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         })
         rowModels.append(sexRow)
+        
+        //
         
         let areaRow = TitleDetailCellRowModel(title: "地區",
                                              detail: self.conditios.area,
@@ -112,6 +119,8 @@ class SearchConditionsViewController: DefaultTableViewController {
         rowModels.append(areaRow)
         self.adapter?.updateData(rowModels: rowModels)
     }
+    
+    
     
     func searchAction() {
         let vc = self.storyboard?.instantiateViewController(identifier: "PetTableViewController") as? PetTableViewController

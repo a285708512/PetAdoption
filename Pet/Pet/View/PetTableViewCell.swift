@@ -55,7 +55,7 @@ class PetTableViewCellRowModel: CellRowModel {
 }
 
 
-//MARK: - 這些程式碼可設定圖片大小&分享.最愛按鈕的功能
+//MARK: - 這些程式碼可設定圖片.分享.最愛按鈕的功能
 class PetTableViewCell: UITableViewCell {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myLabel: UILabel!
@@ -74,7 +74,7 @@ class PetTableViewCell: UITableViewCell {
         lovebutton.addTarget(self, action: #selector(loveButtonAction), for: .touchUpInside)
 
         self.myImageView.contentMode = .scaleToFill
-        self.lovebutton.setTitle("沒興趣", for: .normal)
+        self.lovebutton.setTitle("🤍", for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -114,7 +114,7 @@ extension PetTableViewCell: CellViewBase{
         
         self.rowModel = rowModel
                 
-        self.lovebutton.setTitle(rowModel.isLove ? "想領養" : "沒興趣", for: .normal)
+        self.lovebutton.setTitle(rowModel.isLove ? "❤️" : "🤍", for: .normal)
         
         self.myImageView.sd_setImage(with: URL(string: rowModel.imageURLStr ?? ""),
                                      placeholderImage:UIImage(named:"LoadingImage"),

@@ -14,8 +14,8 @@ enum PetType {
 // 網路層
 class NetworkService {
     static func downloadJson(completed: @escaping (Result<[PetModel], Error>)->()) {
-        //type怎麼直接可以讀到
-        let url = URL(string: "https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&$top=20&$skip=0")
+        
+        let url = URL(string: "https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&$top=100&$skip=0")
         URLSession.shared.dataTask(with: url!) { data, response, error in
             if error == nil {
                 do{

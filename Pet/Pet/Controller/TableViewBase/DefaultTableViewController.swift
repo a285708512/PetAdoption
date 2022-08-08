@@ -14,29 +14,27 @@ class DefaultTableViewController: UIViewController {
     
     var buttonAction: (()->())?
     
-    private var cellIDs: Any?
     
     var adapter: TableViewAdapter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adapter = .init(self.defaultTableView)
+        //是初始化defaultTableView?
         self.setDefaultTableView()
         self.setBottomButton()
-        self.regisCell()
     }
     
-    func setCellIDs<celltype>(cellIDs: celltype){
-        self.cellIDs = cellIDs
-    }
+
     
-    private func regisCell(){
+    //MARK: - celltype傳字串就會跑第31~34行 反之其餘會跑手刻畫面第38~41的程式碼
+    func regisCell<celltype>(cellIDs:celltype){
         if let cellIDs = cellIDs as? [String]{
             for cellID in cellIDs {
                 self.defaultTableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
             }
         }
-        
+        //手刻畫面
         if let cellIDs = cellIDs as? [UITableViewCell.Type] {
             for cellID in cellIDs {
                 self.defaultTableView.register(cellID, forCellReuseIdentifier: "\(cellID)")

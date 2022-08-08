@@ -42,6 +42,7 @@ class PetTableViewController: UIViewController {
         
     }
     
+    //MARK: - 根據user篩選animal kind . area . sex的function
     func filterList(list: [ PetModel ] = []) -> [PetModel] {
         guard let conditions = conditions else {
             return list

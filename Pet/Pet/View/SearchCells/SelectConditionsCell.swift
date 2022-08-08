@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//狗貓的cell
 
 class SelectConditionsCellRowModel: CellRowModel {
     
@@ -46,6 +47,7 @@ class SelectConditionsCell: UITableViewCell {
         self.drawCell()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("我想要overried")
     }
@@ -79,10 +81,11 @@ class SelectConditionsCell: UITableViewCell {
         self.selectionStyle = .none
         self.selectImageView.contentMode = .center
     }
+    //controller  viewdidload的時候
     
 }
 
-//MARK: - 第一個畫面篩選初始化的畫面
+//MARK: - rowModeltest 狗/貓的
 
 extension SelectConditionsCell: CellViewBase {
     func setupCellView(rowModel: CellRowModel) {
