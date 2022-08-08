@@ -17,12 +17,10 @@ class SelectCondionsViewController: DefaultTableViewController {
     var confirmAction: (([String])->())?
     
     override func viewDidLoad() {
-        
-        self.setCellIDs(cellIDs: [
+        super.viewDidLoad()
+        self.regisCell(cellIDs: [
             SelectConditionsCell.self
         ])
-        
-        super.viewDidLoad()
         self.setupRow()
     }
     
@@ -50,25 +48,14 @@ class SelectCondionsViewController: DefaultTableViewController {
         self.adapter?.updateData(rowModels: rowModels)
     }
     
-    override func setBottomButton() {
-            
-            let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
-            button.setTitle("確認", for: .normal)
-            button.backgroundColor = .blue
-            button.setTitleColor(.darkGray, for: .normal)
-            self.view.addSubview(button)
-            button.topAnchor.constraint(equalTo: self.defaultTableView.bottomAnchor,constant: 10).isActive = true
-            button.centerXAnchor.constraint(equalTo: self.defaultTableView.centerXAnchor).isActive = true
-            
-            button.addTarget(self, action: #selector(bottomButtonAction), for: .touchUpInside)
-    }
-    
-    @objc override func bottomButtonAction() {
-        if let confirmAction = self.confirmAction {
-            confirmAction(self.selectedArray)
+    override func creatBottomBarButton() -> [BottomBarButton] {
+        let confirm: BottomBarButton = .confirm {
+            if let confirmAction = self.confirmAction {
+                confirmAction(self.selectedArray)
+            }
+            self.navigationController?.popViewController(animated: true)
         }
-        self.navigationController?.popViewController(animated: true)
+        return [ confirm ]
     }
-    
+ 
 }

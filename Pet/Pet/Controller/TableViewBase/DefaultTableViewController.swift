@@ -11,26 +11,17 @@ import UIKit
 class DefaultTableViewController: UIViewController {
     
     let defaultTableView = UITableView()
-    
-    var buttonAction: (()->())?
-    
-    private var cellIDs: Any?
-    
+            
     var adapter: TableViewAdapter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.adapter = .init(self.defaultTableView)
         self.setDefaultTableView()
-        self.setBottomButton()
-        self.regisCell()
+        self.setBottomBar()
     }
     
-    func setCellIDs<celltype>(cellIDs: celltype){
-        self.cellIDs = cellIDs
-    }
-    
-    private func regisCell(){
+    func regisCell<celltype>(cellIDs: celltype){
         if let cellIDs = cellIDs as? [String]{
             for cellID in cellIDs {
                 self.defaultTableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
@@ -39,7 +30,7 @@ class DefaultTableViewController: UIViewController {
         
         if let cellIDs = cellIDs as? [UITableViewCell.Type] {
             for cellID in cellIDs {
-                self.defaultTableView.register(cellID, forCellReuseIdentifier: "\(cellID)")
+                self.defaultTableView.register(cellID, forCellReuseIdentifier: "\(cellID.self)")
             }
         }
         
@@ -55,25 +46,23 @@ class DefaultTableViewController: UIViewController {
         self.defaultTableView.backgroundColor = .red
     }
     
-    func setBottomButton() {
-        
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("搜尋", for: .normal)
-        button.backgroundColor = .blue
-        button.setTitleColor(.darkGray, for: .normal)
-        self.view.addSubview(button)
-        button.topAnchor.constraint(equalTo: self.defaultTableView.bottomAnchor,constant: 10).isActive = true
-        button.centerXAnchor.constraint(equalTo: self.defaultTableView.centerXAnchor).isActive = true
-        
-        button.addTarget(self, action: #selector(bottomButtonAction), for: .touchUpInside)
+    func creatBottomBarButton() -> [BottomBarButton] {
+        return []
     }
     
-    @objc func bottomButtonAction() {
-        if let buttonAction = buttonAction {
-            buttonAction()
-        }
+    func setBottomBar() {
+        
+        let bottomBarStackView = BottomBarView(buttons: self.creatBottomBarButton())
+        bottomBarStackView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(bottomBarStackView)
+        bottomBarStackView.topAnchor.constraint(equalTo: self.defaultTableView.bottomAnchor).isActive = true
+        bottomBarStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        bottomBarStackView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        bottomBarStackView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        
+        
     }
+
     
     
 }

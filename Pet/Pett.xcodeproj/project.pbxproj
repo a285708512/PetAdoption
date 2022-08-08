@@ -25,6 +25,8 @@
 		2ABB11EC287B0E2300580F5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB11EB287B0E2300580F5D /* Assets.xcassets */; };
 		2ABB11EF287B0E2300580F5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB11ED287B0E2300580F5D /* LaunchScreen.storyboard */; };
 		8543002835A5887E48F74AFB /* Pods_Pet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463526D40C350F983514D366 /* Pods_Pet.framework */; };
+		9454275428A128AC00A66AAB /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454275328A128AC00A66AAB /* BottomBarView.swift */; };
+		9454275628A128BA00A66AAB /* BottomBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454275528A128BA00A66AAB /* BottomBarButton.swift */; };
 		94762E802893EEB5007195B6 /* DefaultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E7F2893EEB5007195B6 /* DefaultTableViewController.swift */; };
 		94762E822893F039007195B6 /* SearchConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E812893F039007195B6 /* SearchConditionsViewController.swift */; };
 		94762E852893F2E7007195B6 /* TitleDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94762E842893F2E7007195B6 /* TitleDetailCell.swift */; };
@@ -55,6 +57,8 @@
 		2ABB11F0287B0E2300580F5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463526D40C350F983514D366 /* Pods_Pet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7645D143B9E5E68AD063F230 /* Pods-Pet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pet.debug.xcconfig"; path = "Target Support Files/Pods-Pet/Pods-Pet.debug.xcconfig"; sourceTree = "<group>"; };
+		9454275328A128AC00A66AAB /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		9454275528A128BA00A66AAB /* BottomBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarButton.swift; sourceTree = "<group>"; };
 		94762E7F2893EEB5007195B6 /* DefaultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableViewController.swift; sourceTree = "<group>"; };
 		94762E812893F039007195B6 /* SearchConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchConditionsViewController.swift; sourceTree = "<group>"; };
 		94762E842893F2E7007195B6 /* TitleDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDetailCell.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				2AA26EE2287B8660003C5045 /* PetTableViewCell.swift */,
 				2AA26EE3287B8660003C5045 /* PetTableViewCell.xib */,
 				94762E832893F2D5007195B6 /* SearchCells */,
+				9454275328A128AC00A66AAB /* BottomBarView.swift */,
+				9454275528A128BA00A66AAB /* BottomBarButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,7 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9454275628A128BA00A66AAB /* BottomBarButton.swift in Sources */,
 				2A9DC2952886402400CECEEF /* RegisterViewController.swift in Sources */,
+				9454275428A128AC00A66AAB /* BottomBarView.swift in Sources */,
 				2AA26EE4287B8660003C5045 /* PetTableViewCell.swift in Sources */,
 				2AA26EF3287B8BFE003C5045 /* PetViewController.swift in Sources */,
 				2AA26EE8287B8694003C5045 /* NetworkSerview.swift in Sources */,

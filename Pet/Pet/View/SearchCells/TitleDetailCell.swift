@@ -31,6 +31,7 @@ class TitleDetailCellRowModel: CellRowModel {
     
 }
 class TitleDetailCell: UITableViewCell {
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var detailLabel: UILabel!

@@ -23,13 +23,11 @@ class SearchConditionsViewController: DefaultTableViewController {
     var areas: [String] = []
     
     override func viewDidLoad() {
-        self.setCellIDs(cellIDs: [
+
+        super.viewDidLoad()
+        self.regisCell(cellIDs: [
             "TitleDetailCell"
         ])
-        super.viewDidLoad()
-        self.buttonAction = {
-            self.searchAction()
-        }
         self.setupRow()
         
         NetworkService.downloadJson() { result in
@@ -42,6 +40,7 @@ class SearchConditionsViewController: DefaultTableViewController {
             }
         }
     }
+    
     func filterArea() {
         var datas:[String] = []
         for pet in self.petList {
@@ -114,6 +113,15 @@ class SearchConditionsViewController: DefaultTableViewController {
         vc?.conditions = self.conditios
         
         self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    override func creatBottomBarButton() -> [BottomBarButton] {
+        let search: BottomBarButton = .search {
+            self.searchAction()
+        }
+        let confirm: BottomBarButton = .confirm {
+            
+        }
+        return [ search,confirm ]
     }
     
 }
