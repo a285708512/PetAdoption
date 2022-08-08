@@ -19,6 +19,7 @@ class DefaultTableViewController: UIViewController {
         self.adapter = .init(self.defaultTableView)
         self.setDefaultTableView()
         self.setBottomBar()
+        self.view.backgroundColor = .white
     }
     
     func regisCell<celltype>(cellIDs: celltype){

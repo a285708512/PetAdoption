@@ -20,8 +20,10 @@ class LoginViewController: UIViewController {
 //                if let e = error{
 //                    print(e)
 //                }else{
-                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+//                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
 //                }
+                let vc = SearchConditionsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
                 
             }
         }

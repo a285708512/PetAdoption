@@ -8,27 +8,23 @@
 import UIKit
 import SDWebImage
 
-class PetTableViewController: UIViewController {
+class PetTableViewController: DefaultTableViewController {
     
     var conditions: SearchConditions?
-
-    @IBOutlet weak  var mTableView: UITableView!
     
     var petList:[ PetModel ] = []
     
     var petType: PetType = .dog
     
-    var adapter: TableViewAdapter?
     
     var loveList: [ PetModel ] = []
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.adapter = .init(mTableView)
-        
-        let nib = UINib(nibName: "PetTableViewCell", bundle: nil)
-        mTableView.register(nib, forCellReuseIdentifier: "PetTableViewCell")
+        self.regisCell(cellIDs: [
+            "PetTableViewCell"
+        ])
         
         NetworkService.downloadJson() { result in
             switch result {

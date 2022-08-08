@@ -9,53 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search Conditions View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="SearchConditionsViewController" id="BYZ-38-t0r" customClass="SearchConditionsViewController" customModule="Pet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="wLc-ve-mPK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="50.892857142857139"/>
-        </scene>
-        <!--Pet Table View Controller-->
-        <scene sceneID="HGi-e9-Vyh">
-            <objects>
-                <viewController storyboardIdentifier="PetTableViewController" id="IKx-68-gfY" customClass="PetTableViewController" customModule="Pet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8am-xn-uGZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hvF-k3-IXO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aX8-t8-3Br"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="hvF-k3-IXO" firstAttribute="leading" secondItem="aX8-t8-3Br" secondAttribute="leading" id="7Ns-6X-hZi"/>
-                            <constraint firstItem="aX8-t8-3Br" firstAttribute="bottom" secondItem="hvF-k3-IXO" secondAttribute="bottom" id="ENX-Rb-QLg"/>
-                            <constraint firstItem="aX8-t8-3Br" firstAttribute="trailing" secondItem="hvF-k3-IXO" secondAttribute="trailing" id="KaF-R6-qQc"/>
-                            <constraint firstItem="hvF-k3-IXO" firstAttribute="top" secondItem="aX8-t8-3Br" secondAttribute="top" id="hr3-Vx-A4o"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="EnQ-qg-EL1"/>
-                    <connections>
-                        <outlet property="mTableView" destination="hvF-k3-IXO" id="klo-8O-gQR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qTy-yp-n0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1734.7826086956522" y="50.892857142857139"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="PPZ-KR-nWH">
             <objects>
@@ -329,7 +282,6 @@
                     <connections>
                         <outlet property="emailTextfield" destination="8AC-la-N6R" id="cGz-Nt-kDm"/>
                         <outlet property="passwordTextfield" destination="N5j-dl-aKm" id="6Nw-1e-PBf"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="RegisterToChat" id="hYW-Sd-t0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8v7-Hp-Re0" sceneMemberID="firstResponder"/>
@@ -424,7 +376,6 @@
                     <connections>
                         <outlet property="emailTextfield" destination="o18-d2-PCh" id="O57-GC-9xA"/>
                         <outlet property="passwordTextfield" destination="H0f-Ai-BkG" id="7ya-bi-XDD"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginToChat" id="TWW-Kf-fIJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZdZ-mK-GbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -432,9 +383,6 @@
             <point key="canvasLocation" x="-491.304347826087" y="835.71428571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="TWW-Kf-fIJ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">

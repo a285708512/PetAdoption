@@ -109,10 +109,10 @@ class SearchConditionsViewController: DefaultTableViewController {
     }
     
     func searchAction() {
-        let vc = self.storyboard?.instantiateViewController(identifier: "PetTableViewController") as? PetTableViewController
-        vc?.conditions = self.conditios
+        let vc = PetTableViewController()
+        vc.conditions = self.conditios
         
-        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     override func creatBottomBarButton() -> [BottomBarButton] {
         let search: BottomBarButton = .search {
